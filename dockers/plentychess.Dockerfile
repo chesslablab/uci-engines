@@ -12,7 +12,7 @@ ADD https://api.github.com/repos/Yoshie2000/PlentyChess/git/refs/heads/main /.gi
 # ------------------------------------------------------------------------------
 
 # Clone and build from main
-RUN git clone https://github.com/Yoshie2000/PlentyChess/ && \
+RUN git clone --branch main --depth 1 https://github.com/Yoshie2000/PlentyChess/ && \
     cd PlentyChess && \
     make -j EXE=PlentyChess
 
