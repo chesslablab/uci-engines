@@ -11,6 +11,13 @@ ADD https://api.github.com/repos/Ciekce/Stormphrax/git/refs/heads/main /.git-has
 
 # ------------------------------------------------------------------------------
 
+# ------------------------------------------------------------------------------
+
+# Force the cache to break, using CACHE_BUST = $(date +%s)
+ARG CACHE_BUST
+
+# ------------------------------------------------------------------------------
+
 # Clone and build from main
 RUN git clone https://github.com/Ciekce/Stormphrax && \
     cd Stormphrax && \
